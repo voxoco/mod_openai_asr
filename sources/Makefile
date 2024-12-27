@@ -4,4 +4,4 @@ CFLAGS = -fPIC -O2 $(shell pkg-config --cflags freeswitch) $(shell pkg-config --
 LDFLAGS = $(shell pkg-config --libs freeswitch) $(shell pkg-config --libs libcurl)
 
 $(MODNAME): mod_openai_asr.c utils.c curl.c
-    $(CC) $(CFLAGS) -shared -o $(MODNAME) $^ $(LDFLAGS)
+	$(CC) $(CFLAGS) -shared -o $(MODNAME) $^ $(LDFLAGS)
